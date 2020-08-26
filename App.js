@@ -10,6 +10,9 @@ import Home from './src/pages/Home';
 import Menu from './src/pages/Menu';
 import Recover from './src/pages/Recover';
 import Perfil from './src/pages/Perfil';
+import Search from './src/pages/Search';
+import Favorites from './src/pages/Favorites';
+import Indicate from './src/pages/Indicate';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -73,6 +76,27 @@ export default function App() {
           }} />
         <Stack.Screen name="Recover" component={Recover} options={{
           title: 'Recuperar Senha',
+          headerStyle: {
+            backgroundColor: '#f7941d',
+          },
+          headerTintColor: '#000',
+        }} />
+        <Stack.Screen name="Search" component={Search} options={{
+          title: 'Procurar Profissional',
+          headerStyle: {
+            backgroundColor: '#f7941d',
+          },
+          headerTintColor: '#000',
+        }} />
+        <Stack.Screen name="Favorites" component={Favorites} options={{
+          title: 'Lista de Favoritos',
+          headerStyle: {
+            backgroundColor: '#f7941d',
+          },
+          headerTintColor: '#000',
+        }} />
+        <Stack.Screen name="Indicate" component={Indicate} options={{
+          title: 'Indique e Ganhe',
           headerStyle: {
             backgroundColor: '#f7941d',
           },

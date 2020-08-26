@@ -3,10 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView,Modal,Alert } from
 // import { ScrollView } from 'react-native-gesture-handler';
 import { Icon } from 'native-base';
 import { FlatList } from 'react-native-gesture-handler';
+import { NavigationRouteContext } from '@react-navigation/native';
 
 // import { Container } from './styles';
 
-const Menu = () => {
+const Menu = ({navigation}) => {
   // const [modalVisible, setModalVisible] = useState(false);
 
   const teste = ()=>{
@@ -29,7 +30,7 @@ const Menu = () => {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
-        // onPress={() => autenticar()}
+        onPress={() => navigation.navigate('Search')}
         style={styles.botao}>
         <Text style={styles.botaoTexto}>
           <Icon style={styles.icone}
@@ -42,7 +43,7 @@ const Menu = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        // onPress={() => autenticar()}
+        onPress={() => navigation.navigate('Favorites')}
         style={styles.botao}>
         <Text style={styles.botaoTexto}>
           <Icon style={styles.icone}
@@ -82,7 +83,7 @@ const Menu = () => {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
-        // onPress={() => autenticar()}
+        onPress={() => navigation.navigate('Indicate')}
         style={styles.botao}>
         <Text style={styles.botaoTexto}>
           <Icon style={styles.icone}
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   icone: {
-    color: '#C0C0C0',
+    color: '#696969',
     fontSize: 50,
   },
 
